@@ -1,5 +1,14 @@
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+install("yfinance")
+
 import yfinance as yf
 import streamlit as st
+
+
 
 st.write("""
 # Simple Stock Price App
